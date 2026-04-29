@@ -1,0 +1,102 @@
+---
+import { t, localizedPath, type Lang } from '../i18n/index';
+
+interface Props {
+  lang: Lang;
+  pathname: string;
+}
+
+const { lang } = Astro.props;
+const i18n = t(lang);
+const year = new Date().getFullYear();
+
+const links = ['home', 'about', 'services', 'portfolio', 'contact'] as const;
+---
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href={localizedPath('/', lang)} class="logo-text" aria-label="WDB Data Consultancy">
+        WDB <span class="accent">Data</span>
+      </a>
+      <p class="tagline">{i18n.footer.tagline}</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      <p class="footer-heading">{i18n.footer.navigation}</p>
+      <ul>
+        {links.map(key => (
+          <li><a href={localizedPath(key === 'home' ? '/' : `/${key}`, lang)}>{i18n.nav[key]}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="footer-contact">
+      <p class="footer-heading">{i18n.footer.getInTouch}</p>
+      <a href="mailto:wouter@wdbdata.com" class="footer-email">wouter@wdbdata.com</a>
+      <p class="footer-location">{i18n.footer.location}</p>
+      <a href={localizedPath('/contact', lang)} class="btn btn-outline"
+         style="margin-top:1.25rem;font-size:0.85rem;padding:0.55rem 1.1rem;">
+        {i18n.footer.startProject}
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© {year} WDB Data Consultancy. {i18n.footer.rights}</p>
+      <p>{i18n.footer.builtBy} <a href={localizedPath('/about', lang)}>Wouter de Boer</a></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer { position: relative; border-top: 1px solid var(--border); overflow: hidden; margin-top: 4rem; }
+
+  .footer-glow {
+    position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  }
+
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.25fr; gap: 3rem; padding: 3.5rem 0; }
+
+  .logo-text {
+    font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700;
+    color: var(--text-primary); text-decoration: none; display: inline-block; margin-bottom: 0.875rem;
+  }
+
+  .accent { color: var(--accent-primary); }
+  .tagline { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
+
+  .footer-heading {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;
+  }
+
+  nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color var(--transition); }
+  nav a:hover { color: var(--accent-primary); }
+
+  .footer-contact { display: flex; flex-direction: column; }
+
+  .footer-email {
+    display: block; color: var(--text-primary); text-decoration: none;
+    font-size: 0.9rem; margin-bottom: 0.35rem; transition: color var(--transition);
+  }
+  .footer-email:hover { color: var(--accent-primary); }
+
+  .footer-location { font-size: 0.82rem; color: var(--text-muted); }
+
+  .footer-bottom { border-top: 1px solid var(--border); padding: 1.25rem 0; }
+  .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; }
+  .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+  .footer-bottom a { color: var(--accent-primary); text-decoration: none; }
+  .footer-bottom a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 0; }
+    .footer-bottom-inner { flex-direction: column; gap: 0.4rem; text-align: center; }
+  }
+</style>

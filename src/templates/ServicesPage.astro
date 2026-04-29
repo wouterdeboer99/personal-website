@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { t, localizedPath, type Lang } from '../i18n/index';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const i = t(lang);
+const s = i.services;
+
+const serviceIcons = [
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg>`,
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M6 6h4M14 6h4M6 18h4M14 18h4M10 12H6M18 12h-4"/></svg>`,
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
+  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M17.5 17.5L21 21M14 17.5h3.5v3.5"/></svg>`,
+];
+---
+
+<Layout title={i.nav.services} lang={lang}>
+
+  <section class="page-hero" aria-labelledby="services-title">
+    <div class="container">
+      <span class="label">{s.hero.label}</span>
+      <h1 class="page-hero-title" id="services-title">
+        {s.hero.title} <span class="gradient-text">{s.hero.titleAccent}</span>
+      </h1>
+      <p class="page-hero-sub">{s.hero.sub}</p>
+    </div>
+  </section>
+
+  <section class="section services-list" aria-label="Services">
+    <div class="container">
+      {s.items.map((svc, idx) => (
+        <article class:list={['service-row', { reverse: idx % 2 !== 0 }]} id={svc.id} aria-labelledby={`${svc.id}-title`}>
+          <div class="service-content">
+            <span class="label">{svc.tagline}</span>
+            <h2 class="section-title" id={`${svc.id}-title`}>
+              <span class="gradient-text">{svc.title}</span>
+            </h2>
+            <p class="section-subtitle" style="margin-bottom:2rem;">{svc.desc}</p>
+            <ul class="deliverables">
+              {svc.deliverables.map(d => (
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="8" cy="8" r="7" stroke="rgba(0,200,255,0.3)" stroke-width="1"/>
+                    <polyline points="5,8 7,10 11,6" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  {d}
+                </li>
+              ))}
+            </ul>
+            <a href={localizedPath('/contact', lang)} class="btn btn-primary" style="margin-top:2rem;">
+              {s.discuss}
+            </a>
+          </div>
+          <div class="service-icon-large glass-card" aria-hidden="true" set:html={serviceIcons[idx]} />
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">{s.process.label}</span>
+        <h2 class="section-title" id="process-heading">
+          {s.process.title} <span class="gradient-text">{s.process.titleAccent}</span>
+        </h2>
+      </div>
+      <div class="process-grid">
+        {s.process.items.map(p => (
+          <div class="process-card glass-card">
+            <span class="process-step gradient-text">{p.step}</span>
+            <h3 class="process-title">{p.title}</h3>
+            <p class="process-desc">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(99,102,241,0.1) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="section-title">
+        {s.cta.title} <span class="gradient-text">{s.cta.titleAccent}</span>
+      </h2>
+      <p class="section-subtitle" style="margin:0 auto 2.5rem;max-width:500px;">{s.cta.sub}</p>
+      <a href={localizedPath('/contact', lang)} class="btn btn-primary">{s.cta.cta}</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section-header { text-align:center; margin-bottom:3.5rem; }
+  .services-list { display:flex; flex-direction:column; gap:6rem; }
+  .service-row { display:grid; grid-template-columns:1.4fr 1fr; gap:5rem; align-items:center; }
+  .service-row.reverse { direction:rtl; }
+  .service-row.reverse > * { direction:ltr; }
+  .service-icon-large { display:flex; align-items:center; justify-content:center; aspect-ratio:1; max-width:280px; margin:0 auto; color:var(--accent-primary); }
+  .service-icon-large :global(svg) { width:80px; height:80px; opacity:0.8; }
+  .deliverables { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
+  .deliverables li { display:flex; align-items:center; gap:0.75rem; font-size:0.9rem; color:var(--text-secondary); }
+  .deliverables svg { flex-shrink:0; }
+  .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
+  .process-card { padding:2rem 1.5rem; display:flex; flex-direction:column; gap:0.75rem; }
+  .process-step { font-family:var(--font-heading); font-size:2rem; font-weight:700; letter-spacing:-0.03em; }
+  .process-title { font-size:1rem; font-weight:600; font-family:var(--font-heading); }
+  .process-desc { font-size:0.875rem; color:var(--text-secondary); line-height:1.7; }
+  @media (max-width:900px) {
+    .service-row { grid-template-columns:1fr; gap:2.5rem; }
+    .service-row.reverse { direction:ltr; }
+    .service-icon-large { display:none; }
+    .process-grid { grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:480px) { .process-grid { grid-template-columns:1fr; } }
+</style>

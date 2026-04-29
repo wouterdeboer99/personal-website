@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { t, localizedPath, type Lang } from '../i18n/index';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const i = t(lang);
+const a = i.about;
+
+const valueIcons = [
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+];
+---
+
+<Layout title={i.nav.about} lang={lang}>
+
+  <section class="page-hero" aria-labelledby="about-title">
+    <div class="container">
+      <span class="label">{a.hero.label}</span>
+      <h1 class="page-hero-title" id="about-title">
+        {a.hero.title} <span class="gradient-text">{a.hero.titleAccent}</span>
+      </h1>
+      <p class="page-hero-sub">{a.hero.sub}</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section story" aria-labelledby="story-heading">
+    <div class="container story-inner">
+      <div class="story-visual" aria-hidden="true">
+        <div class="avatar-card glass-card">
+          <div class="avatar-initials gradient-text">WdB</div>
+          <div class="avatar-info">
+            <strong>{a.card.name}</strong>
+            <span>{a.card.role}</span>
+            <span class="available-chip">
+              <span class="dot"></span> {a.card.available}
+            </span>
+          </div>
+        </div>
+        <div class="story-tags">
+          {a.tags.map(tag => <span class="tag">{tag}</span>)}
+        </div>
+      </div>
+      <div class="story-text">
+        <span class="label">{a.story.label}</span>
+        <h2 class="section-title" id="story-heading">
+          {a.story.title} <span class="gradient-text">{a.story.titleAccent}</span>
+        </h2>
+        <p class="section-subtitle" style="margin-bottom:1.25rem;">{a.story.para1}</p>
+        <p class="section-subtitle" style="margin-bottom:1.25rem;">{a.story.para2}</p>
+        <p class="section-subtitle">{a.story.para3}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section" aria-labelledby="expertise-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">{a.expertise.label}</span>
+        <h2 class="section-title" id="expertise-heading">
+          {a.expertise.title} <span class="gradient-text">{a.expertise.titleAccent}</span>
+        </h2>
+      </div>
+      <div class="expertise-grid">
+        {a.expertise.items.map(e => (
+          <div class="expertise-item glass-card">
+            <div class="expertise-header">
+              <span class="expertise-name">{e.title}</span>
+              <span class="expertise-pct gradient-text">{e.level}%</span>
+            </div>
+            <div class="expertise-bar" role="progressbar" aria-valuenow={e.level} aria-valuemin={0} aria-valuemax={100} aria-label={e.title}>
+              <div class="expertise-fill" style={`width:${e.level}%`}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section" aria-labelledby="values-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">{a.values.label}</span>
+        <h2 class="section-title" id="values-heading">
+          {a.values.title} <span class="gradient-text">{a.values.titleAccent}</span>
+        </h2>
+      </div>
+      <div class="values-grid">
+        {a.values.items.map((v, idx) => (
+          <div class="value-card glass-card">
+            <div class="value-icon" set:html={valueIcons[idx]} />
+            <h3 class="value-title">{v.title}</h3>
+            <p class="value-desc">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section" aria-labelledby="cta-heading">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="container" style="text-align:center;position:relative;z-index:1;">
+      <h2 class="section-title" id="cta-heading">
+        {a.cta.title} <span class="gradient-text">{a.cta.titleAccent}</span>
+      </h2>
+      <p class="section-subtitle" style="margin:0 auto 2.5rem;max-width:500px;">{a.cta.sub}</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href={localizedPath('/contact', lang)} class="btn btn-primary">{a.cta.cta1}</a>
+        <a href={localizedPath('/services', lang)} class="btn btn-outline">{a.cta.cta2}</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section-header { text-align:center; margin-bottom:3.5rem; }
+  .story-inner { display:grid; grid-template-columns:1fr 1.5fr; gap:5rem; align-items:start; }
+  .avatar-card { padding:2rem; display:flex; flex-direction:column; align-items:center; gap:1rem; text-align:center; margin-bottom:1.25rem; }
+  .avatar-initials { font-family:var(--font-heading); font-size:2.5rem; font-weight:700; width:80px; height:80px; display:flex; align-items:center; justify-content:center; background:rgba(0,200,255,0.08); border:1px solid rgba(0,200,255,0.2); border-radius:50%; }
+  .avatar-info { display:flex; flex-direction:column; gap:0.25rem; }
+  .avatar-info strong { font-family:var(--font-heading); font-size:1rem; font-weight:600; }
+  .avatar-info span:not(.available-chip) { font-size:0.82rem; color:var(--text-muted); }
+  .available-chip { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem !important; color:var(--accent-tertiary) !important; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.2); padding:0.25rem 0.625rem; border-radius:100px; margin-top:0.25rem; }
+  .dot { width:6px; height:6px; border-radius:50%; background:var(--accent-tertiary); animation:pulse-glow 2s ease-in-out infinite; flex-shrink:0; }
+  .story-tags { display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; }
+  .tag { font-size:0.75rem; color:var(--text-secondary); background:rgba(255,255,255,0.04); border:1px solid var(--border); padding:0.3rem 0.75rem; border-radius:100px; }
+  .expertise-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+  .expertise-item { padding:1.5rem; }
+  .expertise-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.875rem; }
+  .expertise-name { font-size:0.9rem; font-weight:500; }
+  .expertise-pct { font-family:var(--font-heading); font-size:0.9rem; font-weight:700; }
+  .expertise-bar { height:5px; background:rgba(255,255,255,0.06); border-radius:100px; overflow:hidden; }
+  .expertise-fill { height:100%; background:linear-gradient(90deg,var(--accent-primary),var(--accent-secondary)); border-radius:100px; }
+  .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+  .value-card { padding:2rem; display:flex; flex-direction:column; gap:1rem; }
+  .value-icon { width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(0,200,255,0.08); border:1px solid rgba(0,200,255,0.15); border-radius:10px; color:var(--accent-primary); }
+  .value-title { font-size:1rem; font-weight:600; font-family:var(--font-heading); }
+  .value-desc { font-size:0.875rem; color:var(--text-secondary); line-height:1.7; }
+  .cta-section { text-align:center; position:relative; overflow:hidden; }
+  .cta-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:300px; background:radial-gradient(ellipse,rgba(99,102,241,0.1) 0%,transparent 70%); pointer-events:none; }
+  @media (max-width:900px) {
+    .story-inner { grid-template-columns:1fr; gap:2.5rem; }
+    .story-visual { order:-1; max-width:360px; margin:0 auto; }
+    .expertise-grid { grid-template-columns:1fr; }
+    .values-grid { grid-template-columns:1fr; }
+  }
+</style>

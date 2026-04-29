@@ -1,0 +1,189 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { t, localizedPath, type Lang } from '../i18n/index';
+
+interface Props {
+  lang: Lang;
+  pathname: string;
+}
+
+const { lang, pathname } = Astro.props;
+const i18n = t(lang);
+
+const navLinks = [
+  { key: 'home',      href: localizedPath('/',          lang) },
+  { key: 'about',     href: localizedPath('/about',     lang) },
+  { key: 'services',  href: localizedPath('/services',  lang) },
+  { key: 'portfolio', href: localizedPath('/portfolio', lang) },
+  { key: 'contact',   href: localizedPath('/contact',   lang) },
+] as const;
+
+function isActive(href: string) {
+  if (href === '/' || href === `/${lang}`) return pathname === href || pathname === `/${lang}/`;
+  return pathname === href || pathname.startsWith(href + '/');
+}
+---
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href={localizedPath('/', lang)} class="logo" aria-label="WDB Data Consultancy – Home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="8"  r="2.5" fill="url(#hg)"/>
+        <circle cx="8"  cy="22" r="2.5" fill="url(#hg)"/>
+        <circle cx="24" cy="22" r="2.5" fill="url(#hg)"/>
+        <line x1="16" y1="10.5" x2="8"  y2="19.5" stroke="url(#hg)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="16" y1="10.5" x2="24" y2="19.5" stroke="url(#hg)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="10.5" y1="22" x2="21.5" y2="22" stroke="url(#hg)" stroke-width="1.5" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#00C8FF"/>
+            <stop offset="100%" stop-color="#6366F1"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-text">WDB <span class="logo-accent">Data</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class:list={['nav-link', { active: isActive(link.href) }]}
+            >
+              {i18n.nav[link.key]}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <LanguageSwitcher currentLang={lang} pathname={pathname} />
+      <a href={localizedPath('/contact', lang)} class="btn btn-primary header-cta">
+        {i18n.nav.cta}
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul>
+      {navLinks.map(link => (
+        <li><a href={link.href} class="mobile-link">{i18n.nav[link.key]}</a></li>
+      ))}
+      <li>
+        <a href={localizedPath('/contact', lang)} class="btn btn-primary" style="margin-top:0.5rem;width:100%;justify-content:center;">
+          {i18n.nav.cta}
+        </a>
+      </li>
+      <li style="margin-top:1rem;display:flex;justify-content:center;">
+        <LanguageSwitcher currentLang={lang} pathname={pathname} />
+      </li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 0;
+    transition: background 250ms ease, padding 250ms ease, border-color 250ms ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .header.scrolled {
+    background: rgba(4, 13, 33, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom-color: rgba(255,255,255,0.06);
+    padding: 0.875rem 0;
+  }
+
+  .header-inner { display: flex; align-items: center; gap: 1.25rem; }
+
+  .logo {
+    display: flex; align-items: center; gap: 0.625rem;
+    text-decoration: none; flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: var(--font-heading); font-size: 1.15rem;
+    font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em;
+  }
+
+  .logo-accent { color: var(--accent-primary); }
+
+  .nav { flex: 1; }
+
+  .nav-list { display: flex; list-style: none; gap: 0.125rem; justify-content: center; }
+
+  .nav-link {
+    display: block; padding: 0.45rem 0.875rem;
+    color: var(--text-secondary); text-decoration: none;
+    font-size: 0.9rem; font-weight: 500; border-radius: 6px;
+    transition: color var(--transition), background var(--transition);
+  }
+
+  .nav-link:hover  { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+  .nav-link.active { color: var(--accent-primary); background: rgba(0,200,255,0.08); }
+
+  .header-right { display: flex; align-items: center; gap: 0.875rem; flex-shrink: 0; }
+  .header-cta   { font-size: 0.875rem; padding: 0.55rem 1.2rem; }
+
+  .menu-toggle {
+    display: none; flex-direction: column; gap: 5px;
+    padding: 0.5rem; background: none; border: none; cursor: pointer; margin-left: auto;
+  }
+
+  .menu-toggle span {
+    display: block; width: 22px; height: 2px;
+    background: var(--text-primary); border-radius: 2px; transition: all 250ms ease;
+  }
+
+  .mobile-nav {
+    display: none; padding: 1rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--border);
+    background: rgba(4, 13, 33, 0.97);
+  }
+
+  .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.25rem; }
+
+  .mobile-link {
+    display: block; padding: 0.7rem 0.875rem;
+    color: var(--text-secondary); text-decoration: none;
+    font-size: 1rem; font-weight: 500; border-radius: 8px;
+    transition: all var(--transition);
+  }
+
+  .mobile-link:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+
+  @media (max-width: 900px) {
+    .nav, .header-right { display: none; }
+    .menu-toggle { display: flex; }
+    .mobile-nav.open { display: block; }
+  }
+</style>
+
+<script>
+  const header   = document.getElementById('header')!;
+  const toggle   = document.querySelector('.menu-toggle') as HTMLButtonElement;
+  const mobileNav = document.getElementById('mobile-nav')!;
+
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  toggle.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    mobileNav.setAttribute('aria-hidden', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+</script>

@@ -1,0 +1,61 @@
+---
+import { languages, localizedPath, type Lang } from '../i18n/index';
+
+interface Props {
+  currentLang: Lang;
+  pathname: string;
+}
+
+const { currentLang, pathname } = Astro.props;
+---
+
+<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+  {Object.entries(languages).map(([lang, { label, name }]) => (
+    <a
+      href={localizedPath(pathname, lang as Lang)}
+      class:list={['lang-btn', { active: lang === currentLang }]}
+      aria-label={`Switch to ${name}`}
+      aria-current={lang === currentLang ? 'true' : undefined}
+      hreflang={lang}
+    >
+      {label}
+    </a>
+  ))}
+</div>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+  }
+
+  .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 26px;
+    border-radius: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all var(--transition);
+  }
+
+  .lang-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .lang-btn.active {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+  }
+</style>
