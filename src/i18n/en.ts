@@ -12,7 +12,7 @@ export default {
   },
   home: {
     hero: {
-      badge: 'Available for Projects',
+      badge: 'Available from September',
       title: 'Transforming Data', titleAccent: 'Into Business Value',
       intro: "Hi, I'm", name: 'Wouter de Boer',
       sub: '— Solution Architect specialising in Master Data Management, Data Quality and PIM. With experience at Deloitte and in the tech industry, I design data solutions that scale with business complexity.',
@@ -59,7 +59,7 @@ export default {
       label: 'About Me', title: 'Meet', titleAccent: 'Wouter de Boer',
       sub: 'Solution Architect with experience at Deloitte — designing MDM, Data Quality and PIM solutions that scale with business complexity.',
     },
-    card: { name: 'Wouter de Boer', role: 'Solution Architect & Founder, WDB Data Consultancy', available: 'Available for Projects' },
+    card: { name: 'Wouter de Boer', role: 'Solution Architect & Founder, WDB Data Consultancy', available: 'Available from September' },
     tags: ['Informatica', 'Reltio', 'Stibo', 'SAP MDG', 'Kafka', 'MuleSoft', 'AWS', 'Azure'],
     story: {
       label: 'My Story', title: 'Designing Data Solutions', titleAccent: 'That Scale',
@@ -178,7 +178,7 @@ export default {
       responseLabel: 'Response Time', response: 'Within 24 hours',
     },
     availability: {
-      status: 'Currently Available',
+      status: 'Available from September',
       desc: "I'm open to new project engagements, both short-term advisory and longer-term implementation roles.",
       cta: 'View Services',
     },

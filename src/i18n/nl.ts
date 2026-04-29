@@ -12,7 +12,7 @@ export default {
   },
   home: {
     hero: {
-      badge: 'Beschikbaar voor projecten',
+      badge: 'Beschikbaar vanaf september',
       title: 'Data omzetten in', titleAccent: 'Bedrijfswaarde',
       intro: 'Hallo, ik ben', name: 'Wouter de Boer',
       sub: '— Solution Architect gespecialiseerd in Master Data Management, Datakwaliteit en PIM. Met ervaring bij Deloitte en in de techsector ontwerp ik data-oplossingen die meegroeien met bedrijfscomplexiteit.',
@@ -59,7 +59,7 @@ export default {
       label: 'Over mij', title: 'Maak kennis met', titleAccent: 'Wouter de Boer',
       sub: 'Solution Architect met ervaring bij Deloitte — MDM-, Datakwaliteits- en PIM-oplossingen ontwerpen die meegroeien met bedrijfscomplexiteit.',
     },
-    card: { name: 'Wouter de Boer', role: 'Solution Architect & Oprichter, WDB Data Consultancy', available: 'Beschikbaar voor projecten' },
+    card: { name: 'Wouter de Boer', role: 'Solution Architect & Oprichter, WDB Data Consultancy', available: 'Beschikbaar vanaf september' },
     tags: ['Informatica', 'Reltio', 'Stibo', 'SAP MDG', 'Kafka', 'MuleSoft', 'AWS', 'Azure'],
     story: {
       label: 'Mijn verhaal', title: 'Data-oplossingen ontwerpen', titleAccent: 'die schalen',
@@ -178,7 +178,7 @@ export default {
       responseLabel: 'Reactietijd', response: 'Binnen 24 uur',
     },
     availability: {
-      status: 'Momenteel beschikbaar',
+      status: 'Beschikbaar vanaf september',
       desc: 'Ik sta open voor nieuwe projectopdrachten, zowel kortetermijn-advies als langdurigere implementatierollen.',
       cta: 'Bekijk diensten',
     },

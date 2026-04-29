@@ -12,7 +12,7 @@ export default {
   },
   home: {
     hero: {
-      badge: 'Beskikber foar projekten',
+      badge: 'Beskikber fanôf septimber',
       title: 'Data omfoarmje ta', titleAccent: 'Bedriuwswearde',
       intro: 'Hoi, ik bin', name: 'Wouter de Boer',
       sub: "— Solution Arsjitekt spesjalisearre yn Master Data Management, Datakwaliteit en PIM. Mei ûnderfining by Deloitte en yn 'e techsektor ûntwerp ik data-oplossingen dy't meiskalearje mei bedriuwskompleksiteit.",
@@ -59,7 +59,7 @@ export default {
       label: 'Oer my', title: 'Meitsje kennis mei', titleAccent: 'Wouter de Boer',
       sub: "Solution Arsjitekt mei ûnderfining by Deloitte — MDM-, Datakwaliteits- en PIM-oplossingen ûntwerpen dy't meiskalearje mei bedriuwskompleksiteit.",
     },
-    card: { name: 'Wouter de Boer', role: 'Solution Arsjitekt & Oprjochter, WDB Data Consultancy', available: 'Beskikber foar projekten' },
+    card: { name: 'Wouter de Boer', role: 'Solution Arsjitekt & Oprjochter, WDB Data Consultancy', available: 'Beskikber fanôf septimber' },
     tags: ['Informatica', 'Reltio', 'Stibo', 'SAP MDG', 'Kafka', 'MuleSoft', 'AWS', 'Azure'],
     story: {
       label: 'Myn ferhaal', title: 'Data-oplossingen ûntwerpen', titleAccent: 'dy\'t skalearje',
@@ -178,7 +178,7 @@ export default {
       responseLabel: 'Reaksjetiid', response: 'Binnen 24 oere',
     },
     availability: {
-      status: 'Op it stuit beskikber',
+      status: 'Beskikber fanôf septimber',
       desc: "Ik stean iepen foar nije projektopdrachen, sawol koartetimijn-advys as langer-duorjende ymplementaasjrollen.",
       cta: 'Tsjinsten besjen',
     },
