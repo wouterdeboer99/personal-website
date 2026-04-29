@@ -28,7 +28,7 @@ const { currentLang, pathname } = Astro.props;
     display: flex;
     align-items: center;
     gap: 2px;
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--bg-surface);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 3px;
@@ -50,12 +50,12 @@ const { currentLang, pathname } = Astro.props;
   }
 
   .lang-btn:hover {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.06);
+    color: var(--accent-primary);
+    background: var(--accent-glow);
   }
 
   .lang-btn.active {
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    background: var(--accent-primary);
     color: #fff;
   }
 </style>

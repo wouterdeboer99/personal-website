@@ -36,8 +36,8 @@ function isActive(href: string) {
         <line x1="10.5" y1="22" x2="21.5" y2="22" stroke="url(#hg)" stroke-width="1.5" stroke-linecap="round"/>
         <defs>
           <linearGradient id="hg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stop-color="#00C8FF"/>
-            <stop offset="100%" stop-color="#6366F1"/>
+            <stop offset="0%"   stop-color="#1B3A5C"/>
+            <stop offset="100%" stop-color="#2A5A8C"/>
           </linearGradient>
         </defs>
       </svg>
@@ -94,15 +94,18 @@ function isActive(href: string) {
     top: 0; left: 0; right: 0;
     z-index: 100;
     padding: 1.25rem 0;
-    transition: background 250ms ease, padding 250ms ease, border-color 250ms ease;
-    border-bottom: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background 250ms ease, padding 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+    border-bottom: 1px solid var(--border);
   }
 
   .header.scrolled {
-    background: rgba(4, 13, 33, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom-color: rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: var(--border);
     padding: 0.875rem 0;
   }
 
@@ -131,8 +134,8 @@ function isActive(href: string) {
     transition: color var(--transition), background var(--transition);
   }
 
-  .nav-link:hover  { color: var(--text-primary); background: rgba(255,255,255,0.05); }
-  .nav-link.active { color: var(--accent-primary); background: rgba(0,200,255,0.08); }
+  .nav-link:hover  { color: var(--text-primary); background: var(--bg-surface); }
+  .nav-link.active { color: var(--accent-primary); background: var(--accent-glow); }
 
   .header-right { display: flex; align-items: center; gap: 0.875rem; flex-shrink: 0; }
   .header-cta   { font-size: 0.875rem; padding: 0.55rem 1.2rem; }
@@ -150,7 +153,7 @@ function isActive(href: string) {
   .mobile-nav {
     display: none; padding: 1rem 1.25rem 1.25rem;
     border-top: 1px solid var(--border);
-    background: rgba(4, 13, 33, 0.97);
+    background: #FFFFFF;
   }
 
   .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.25rem; }
@@ -162,7 +165,7 @@ function isActive(href: string) {
     transition: all var(--transition);
   }
 
-  .mobile-link:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+  .mobile-link:hover { color: var(--text-primary); background: var(--bg-surface); }
 
   @media (max-width: 900px) {
     .nav, .header-right { display: none; }

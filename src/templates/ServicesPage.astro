@@ -41,8 +41,8 @@ const serviceIcons = [
               {svc.deliverables.map(d => (
                 <li>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <circle cx="8" cy="8" r="7" stroke="rgba(0,200,255,0.3)" stroke-width="1"/>
-                    <polyline points="5,8 7,10 11,6" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8" cy="8" r="7" stroke="rgba(27,58,92,0.25)" stroke-width="1"/>
+                    <polyline points="5,8 7,10 11,6" stroke="#1B3A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   {d}
                 </li>
@@ -80,8 +80,7 @@ const serviceIcons = [
   </section>
 
   <!-- CTA -->
-  <section class="section" style="text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(99,102,241,0.1) 0%,transparent 70%);pointer-events:none;" aria-hidden="true"></div>
+  <section class="section" style="text-align:center;background:var(--bg-surface);">
     <div class="container" style="position:relative;z-index:1;">
       <h2 class="section-title">
         {s.cta.title} <span class="gradient-text">{s.cta.titleAccent}</span>
@@ -98,8 +97,8 @@ const serviceIcons = [
   .service-row { display:grid; grid-template-columns:1.4fr 1fr; gap:5rem; align-items:center; }
   .service-row.reverse { direction:rtl; }
   .service-row.reverse > * { direction:ltr; }
-  .service-icon-large { display:flex; align-items:center; justify-content:center; aspect-ratio:1; max-width:280px; margin:0 auto; color:var(--accent-primary); }
-  .service-icon-large :global(svg) { width:80px; height:80px; opacity:0.8; }
+  .service-icon-large { display:flex; align-items:center; justify-content:center; aspect-ratio:1; max-width:280px; margin:0 auto; color:var(--accent-primary); background:var(--bg-surface); }
+  .service-icon-large :global(svg) { width:80px; height:80px; opacity:0.75; }
   .deliverables { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
   .deliverables li { display:flex; align-items:center; gap:0.75rem; font-size:0.9rem; color:var(--text-secondary); }
   .deliverables svg { flex-shrink:0; }

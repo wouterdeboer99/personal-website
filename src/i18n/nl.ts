@@ -4,7 +4,7 @@ export default {
     portfolio: 'Portfolio', contact: 'Contact', cta: 'Neem contact op',
   },
   footer: {
-    tagline: 'Data omzetten in bedrijfswaarde door expertconsultancy in MDM, PIM en Oplossingsarchitectuur.',
+    tagline: 'Data omzetten in bedrijfswaarde door expertconsultancy in MDM, Datakwaliteit, PIM en Oplossingsarchitectuur.',
     navigation: 'Navigatie', getInTouch: 'Neem contact op',
     location: 'Nederland · Wereldwijd beschikbaar',
     startProject: 'Start een project', rights: 'Alle rechten voorbehouden.',
@@ -15,12 +15,12 @@ export default {
       badge: 'Beschikbaar voor projecten',
       title: 'Data omzetten in', titleAccent: 'Bedrijfswaarde',
       intro: 'Hallo, ik ben', name: 'Wouter de Boer',
-      sub: '— dataconsultancy-expert gespecialiseerd in Datamanagement, MDM, PIM en Oplossingsarchitectuur. Ik help organisaties het volledige potentieel van hun data te benutten.',
+      sub: '— Solution Architect gespecialiseerd in Master Data Management, Datakwaliteit en PIM. Met ervaring bij Deloitte en in de techsector ontwerp ik data-oplossingen die meegroeien met bedrijfscomplexiteit.',
       cta1: 'Bekijk diensten', cta2: 'Bekijk portfolio',
     },
     stats: [
-      { value: '10+', label: 'Jaar ervaring' },
-      { value: '30+', label: 'Projecten opgeleverd' },
+      { value: '8+',  label: 'Jaar ervaring' },
+      { value: '15+', label: 'Projecten opgeleverd' },
       { value: '5+',  label: 'Sectoren bediend' },
       { value: '100%', label: 'Klanttevredenheid' },
     ],
@@ -30,7 +30,7 @@ export default {
       sub: 'Van strategie tot implementatie — ik dek het volledige spectrum van dataconsultancy af, afgestemd op uw bedrijfsbehoeften.',
       learnMore: 'Meer informatie →',
       items: [
-        { title: 'Datamanagement',                desc: 'Opbouwen van robuuste datagovernance-frameworks, kwaliteitsstandaarden en lifecycle-strategieën die ruwe data omzetten in een betrouwbaar bedrijfsmiddel.' },
+        { title: 'Datamanagement & Kwaliteit',    desc: 'Opbouwen van robuuste datakwaliteitsgovernance-frameworks — standaarden en tooling definiëren die schalen over markten en business units.' },
         { title: 'Master Data Management',         desc: 'Ontwerpen en implementeren van MDM-oplossingen die consistente, nauwkeurige en uniforme masterdata garanderen in uw hele organisatie.' },
         { title: 'Product Information Management', desc: 'Optimaliseren van PIM-systemen om productgegevens te stroomlijnen, de time-to-market te verkorten en de klantervaring in alle kanalen te verbeteren.' },
         { title: 'Oplossingsarchitectuur',         desc: 'Ontwerpen van schaalbare, toekomstbestendige dataarchitecturen die aansluiten bij uw bedrijfsdoelen, technologielandschap en langetermijngroeistrategie.' },
@@ -39,8 +39,8 @@ export default {
     about: {
       label: 'Over Wouter',
       title: 'Een consultant die', titleAccent: 'Resultaten levert',
-      para1: 'Met meer dan een decennium aan praktijkervaring in dataconsultancy heb ik organisaties in meerdere sectoren geholpen bij het ontwerpen, implementeren en optimaliseren van hun datastrategieën.',
-      para2: 'Mijn aanpak combineert technische diepgang met zakelijk inzicht — oplossingen die niet alleen architecturaal solide zijn, maar ook praktisch en schaalbaar.',
+      para1: 'Met ervaring bij Deloitte en in de techsector ontwerp ik MDM-, Datakwaliteits- en PIM-oplossingen die meegroeien met bedrijfscomplexiteit — werkend over de volledige delivery lifecycle, van architectuur en platformselectie tot integratieontwerp.',
+      para2: "Gefundeerd in DAMA DMBOK en Agile-principes werk ik nauw samen met zakelijke en technische stakeholders om oplossingen te laten beklijven. Ik verken ook actief hoe AI datakwaliteit en verrijking naar een hoger niveau kan tillen.",
       cta: 'Meer over mij',
       highlights: [
         { icon: '🏗️', title: 'Architectuur voorop',   desc: 'Elke oplossing begint met een solide, schaalbare architectuur ontworpen voor uw toekomst.' },
@@ -57,25 +57,25 @@ export default {
   about: {
     hero: {
       label: 'Over mij', title: 'Maak kennis met', titleAccent: 'Wouter de Boer',
-      sub: 'Dataconsultant, architect en probleemoplosser — ik help organisaties inzicht te krijgen in hun meest waardevolle asset: hun data.',
+      sub: 'Solution Architect met ervaring bij Deloitte — MDM-, Datakwaliteits- en PIM-oplossingen ontwerpen die meegroeien met bedrijfscomplexiteit.',
     },
-    card: { name: 'Wouter de Boer', role: 'Oprichter, WDB Data Consultancy', available: 'Beschikbaar voor projecten' },
-    tags: ['MDM', 'PIM', 'Datagovernance', 'Oplossingsarchitectuur', 'Datakwaliteit', 'Datastrategie'],
+    card: { name: 'Wouter de Boer', role: 'Solution Architect & Oprichter, WDB Data Consultancy', available: 'Beschikbaar voor projecten' },
+    tags: ['Informatica', 'Reltio', 'Stibo', 'SAP MDG', 'Kafka', 'MuleSoft', 'AWS', 'Azure'],
     story: {
-      label: 'Mijn verhaal', title: 'Passie voor het omzetten van', titleAccent: 'Datachaos in Overzicht',
-      para1: "Ik richtte WDB Data Consultancy op na jaren werkzaam te zijn geweest bij organisaties die worstelden met gefragmenteerde, inconsistente en onbetrouwbare data. Ik zag hoe slechte datafundamenten besluitvorming konden verlammen, bedrijfsprocessen vertragen en organisaties miljoenen konden kosten.",
-      para2: "Mijn expertise omvat het volledige datamanagementspectrum — van het definiëren van MDM-strategieën voor mondiale ondernemingen tot het implementeren van PIM-systemen die omnichannel commerce aandrijven.",
-      para3: "Ik combineer strategisch denken met praktische uitvoering. Of u nu een data-architectuurplan of een volledige MDM-implementatie nodig heeft, ik breng zowel de visie als de technische diepgang om het te realiseren.",
+      label: 'Mijn verhaal', title: 'Data-oplossingen ontwerpen', titleAccent: 'die schalen',
+      para1: "Als Solution Architect met ervaring bij Deloitte en in de techsector specialiseer ik me in het ontwerpen van Master Data Management (MDM)-, Datakwaliteits- (DQ) en PIM-oplossingen die meegroeien met bedrijfscomplexiteit.",
+      para2: "Ik werk over de volledige delivery lifecycle — van architectuur en platformselectie (Informatica, Reltio, Stibo, SAP MDG) tot integratieontwerp (Informatica IDMC, MuleSoft, Kafka, REST API's, Amazon SQS) en derde partij-ecosystemen. Altijd in nauwe samenwerking met zakelijke en technische stakeholders om oplossingen te laten beklijven.",
+      para3: "Gefundeerd in DAMA DMBOK en Agile-principes breng ik structuur in complexe dataprogramma's zonder het menselijke aspect uit het oog te verliezen. Ik verken ook actief hoe AI datakwaliteit en verrijking naar een hoger niveau kan tillen — en deel die ideeën graag met de datacommunity.",
     },
     expertise: {
       label: 'Kerncompetenties', title: 'Gebieden van', titleAccent: 'Diepe expertise',
       items: [
-        { title: 'Datamanagement', level: 95 },
         { title: 'Master Data Management (MDM)', level: 95 },
+        { title: 'Datakwaliteitsmanagement', level: 95 },
         { title: 'Product Information Management (PIM)', level: 90 },
-        { title: 'Oplossingsarchitectuur', level: 88 },
-        { title: 'Datagovernance', level: 85 },
-        { title: 'Datakwaliteitsmanagement', level: 90 },
+        { title: 'Oplossingsarchitectuur', level: 90 },
+        { title: 'Integratiearchitectuur', level: 85 },
+        { title: 'Datagovernance & DAMA DMBOK', level: 88 },
       ],
     },
     values: {
@@ -99,9 +99,9 @@ export default {
     },
     discuss: 'Bespreek deze dienst',
     items: [
-      { id: 'data-management', tagline: 'Van chaos naar overzicht', title: 'Datamanagement Consultancy',
-        desc: 'Ik help organisaties de fundament van een gezond data-ecosysteem te bouwen — governance-frameworks, kwaliteitsstandaarden en lifecycle-managementprocessen die ervoor zorgen dat data een betrouwbare, vertrouwde asset is in de hele organisatie.',
-        deliverables: ['Ontwerp en implementatie van datagovernance-framework','Datakwaliteitsbeoordeling en verbeterroadmap','Strategie voor data lifecycle management','Metadatabeheer en datacatalogisering','Modellen voor data-eigendom en data stewardship','Beleid, standaarden en documentatie'] },
+      { id: 'data-management', tagline: 'Van chaos naar overzicht', title: 'Datamanagement & Kwaliteit',
+        desc: 'Ik help organisaties robuuste datakwaliteitsgovernance-frameworks te bouwen — standaarden, tooling en processen definiëren die schalen over markten en business units. Van globale DQ-blueprints en kwaliteitsbeoordelingen tot lifecycle management en metadatastrategieën, zodat data een vertrouwde, beheerde bedrijfsasset wordt.',
+        deliverables: ['Ontwerp en implementatie van datakwaliteitsgovernance-framework','Datakwaliteitsbeoordeling en verbeterroadmap','DQ-tooling selectie & implementatie','Strategie voor data lifecycle management','Metadatabeheer en datacatalogisering','Modellen voor data-eigendom en data stewardship'] },
       { id: 'mdm', tagline: 'Één bron van waarheid', title: 'Master Data Management',
         desc: 'Gefragmenteerde masterdata — gedupliceerde klanten, inconsistente producten, tegenstrijdige leveranciersgegevens — kost bedrijven enorm veel. Ik ontwerp en implementeer MDM-oplossingen die één betrouwbare versie creëren van uw meest kritieke data-entiteiten.',
         deliverables: ['MDM-strategie en platformselectie','Datamodelontwerp voor masterdata-domeinen','Duplicaatdetectie en data-deduplicatie','Golden record-ontwerp en survivorship-regels','Integratie met bron- en afnemende systemen','Verandermanagement en adoptieondersteuning'] },
@@ -110,7 +110,7 @@ export default {
         deliverables: ['PIM-platformselectie en -implementatie','Productdatamodel en taxonomie-ontwerp','Kanaalspecifieke data-verrijkingsworkflows','Integratie met Digital Asset Management (DAM)','E-commerce en ERP-integratie','Optimalisatie van productonboarding-proces'] },
       { id: 'architecture', tagline: 'Gebouwd om te schalen', title: 'Oplossingsarchitectuur',
         desc: 'Een geweldige oplossing begint met een geweldig ontwerp. Ik lever oplossingsarchitectuur voor dataplatformen, integratielandschappen en bedrijfssystemen — zodat uw investeringen schaalbaar, onderhoudbaar en afgestemd zijn op uw strategische richting.',
-        deliverables: ['Dataplatformarchitectuur en -ontwerp','Enterprise data-integratiearchitectuur','Technologielandschapbeoordeling','Cloud-dataplatformontwerp (Azure, AWS, GCP)','Architectuurroadmaps en migratieplannen','Architectuurgovernance en -review'] },
+        deliverables: ['Dataplatformarchitectuur en -ontwerp','Event-driven integratieontwerp (Kafka, Amazon SQS, REST APIs)','Technologielandschapbeoordeling','Cloud-dataplatformontwerp (Azure, AWS, GCP)','Architectuurroadmaps en migratieplannen','Architectuurgovernance en -review'] },
     ],
     process: {
       label: 'Mijn werkwijze', title: 'Mijn', titleAccent: 'Engagementproces',

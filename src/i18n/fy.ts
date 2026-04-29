@@ -4,7 +4,7 @@ export default {
     portfolio: 'Portfolio', contact: 'Kontakt', cta: 'Nim kontakt op',
   },
   footer: {
-    tagline: 'Data omfoarmje ta bedriuwswearde troch ekspert-konsultaasje yn MDM, PIM en Oplossingsarsjitektuer.',
+    tagline: 'Data omfoarmje ta bedriuwswearde troch ekspert-konsultaasje yn MDM, Datakwaliteit, PIM en Oplossingsarsjitektuer.',
     navigation: 'Navigaasje', getInTouch: 'Nim kontakt op',
     location: 'Nederlân · Wrâldwiid beskikber',
     startProject: 'Start in projekt', rights: 'Alle rjochten foarbehâlden.',
@@ -15,12 +15,12 @@ export default {
       badge: 'Beskikber foar projekten',
       title: 'Data omfoarmje ta', titleAccent: 'Bedriuwswearde',
       intro: 'Hoi, ik bin', name: 'Wouter de Boer',
-      sub: "— data-konsultaasje-ekspert spesjalisearre yn Databehearsking, MDM, PIM en Oplossingsarsjitektuer. Ik help organisaasjes it folsleine potensjeel fan harren data te benutten.",
+      sub: "— Solution Arsjitekt spesjalisearre yn Master Data Management, Datakwaliteit en PIM. Mei ûnderfining by Deloitte en yn 'e techsektor ûntwerp ik data-oplossingen dy't meiskalearje mei bedriuwskompleksiteit.",
       cta1: 'Tsjinsten besjen', cta2: 'Portfolio besjen',
     },
     stats: [
-      { value: '10+', label: 'Jierren ûnderfining' },
-      { value: '30+', label: 'Projekten levere' },
+      { value: '8+',  label: 'Jierren ûnderfining' },
+      { value: '15+', label: 'Projekten levere' },
       { value: '5+',  label: 'Sektoaren betsjinne' },
       { value: '100%', label: 'Kliïnttevredenheld' },
     ],
@@ -30,7 +30,7 @@ export default {
       sub: "Fan strategy oant ymplementaasje — ik dek it folsleine spektrum fan data-konsultaasje ôf, ôfstimd op jo bedriuwsbehoeften.",
       learnMore: 'Mear ynformaasje →',
       items: [
-        { title: 'Databehearsking',                desc: "Bouwen fan robúste datagovernance-ramt, kwaliteitsstanderts en lifecycle-strategyen dy't ruwe data omfoarmje ta in betrouber bedriuwsmiddel." },
+        { title: 'Databehearsking & Kwaliteit',    desc: "Bouwen fan robúste datakwaliteitsgovernance-ramt — standerts en ark definiearjen dy't skalearje oer merken en bedriuwsienheid." },
         { title: 'Master Data Management',          desc: "Ûntwerpen en ymplementearjen fan MDM-oplossingen dy't konsistinte, krekte en uniforme masterdata garandearje yn jo hiele organisaasje." },
         { title: 'Product Information Management',  desc: "Optimalisearjen fan PIM-systemen om produktgegevens te streamlinen, de time-to-market te ferkoartsjen en de klantûnderfining yn alle kanalen te ferbetterjen." },
         { title: 'Oplossingsarsjitektuer',          desc: "Ûntwerpen fan skalberbare, takomstbestindige data-arsjitekturen dy't oansútte by jo bedriuwsdoelen, technology-lânskip en langetermyn-groeistrategy." },
@@ -39,8 +39,8 @@ export default {
     about: {
       label: 'Oer Wouter',
       title: "In konsultant dy't", titleAccent: 'Resultaten behellet',
-      para1: "Mei mear as in desennium praktyske ûnderfining yn data-konsultaasje haw ik organisaasjes yn ferskate sektoaren holpen by it ûntwerpen, ymplementearjen en optimalisearjen fan harren data-strategyen.",
-      para2: "Myn oanpak kombinearret technyske djipgong mei saaklik ynsjoch — oplossingen dy't net allinne arsjitektoanysk solide binne, mar ek praktysk en skalbear.",
+      para1: "Mei ûnderfining by Deloitte en yn 'e techsektor ûntwerp ik MDM-, Datakwaliteits- en PIM-oplossingen dy't meiskalearje mei bedriuwskompleksiteit — wurkjend oer de folsleine delivery lifecycle, fan arsjitektuer en platfoarmseleksje oant yntegraasjûntwerp.",
+      para2: "Funderre yn DAMA DMBOK en Agile-prinsipes wurkje ik nau gear mei saaklike en technyske stakeholders om oplossingen fêst te meitsjen. Ik ferkennez ek aktyf hoe't AI datakwaliteit en ferriking nei in heger nivo bringe kin.",
       cta: 'Mear oer my',
       highlights: [
         { icon: '🏗️', title: 'Arsjitektuer earst',    desc: 'Elke oplossing begjint mei in solide, skalbere arsjitektuer ûntworpen foar jo takomst.' },
@@ -57,25 +57,25 @@ export default {
   about: {
     hero: {
       label: 'Oer my', title: 'Meitsje kennis mei', titleAccent: 'Wouter de Boer',
-      sub: "Data-konsultant, arsjitekt en probleem-oplôsser — ik help organisaasjes sin te meitsjen fan harren weardefolste asset: harren data.",
+      sub: "Solution Arsjitekt mei ûnderfining by Deloitte — MDM-, Datakwaliteits- en PIM-oplossingen ûntwerpen dy't meiskalearje mei bedriuwskompleksiteit.",
     },
-    card: { name: 'Wouter de Boer', role: 'Oprjochter, WDB Data Consultancy', available: 'Beskikber foar projekten' },
-    tags: ['MDM', 'PIM', 'Datagovernance', 'Oplossingsarsjitektuer', 'Datakwaliteit', 'Data-strategy'],
+    card: { name: 'Wouter de Boer', role: 'Solution Arsjitekt & Oprjochter, WDB Data Consultancy', available: 'Beskikber foar projekten' },
+    tags: ['Informatica', 'Reltio', 'Stibo', 'SAP MDG', 'Kafka', 'MuleSoft', 'AWS', 'Azure'],
     story: {
-      label: 'Myn ferhaal', title: 'Passy foar it omfoarmjen fan', titleAccent: 'Data-kaos yn Dúdlikheid',
-      para1: "Ik oprjochte WDB Data Consultancy nei jierren wurkjend by organisaasjes dy't striiden mei fragmentearre, ynkonsistinte en net-betrouber data. Ik seach hoe't minne datafûneminten beslútfoarming lammelje, bedriuwsproses fertrage en organisaasjes miljoenen koste kinne.",
-      para2: "Myn ekspertize oerspant it folsleine data-behearskingspektrum — fan it definiearjen fan MDM-strategyen foar wrâldwide ûndernimmingen oant it ymplementearjen fan PIM-systemen dy't omni-kanaal-kommersje oandriuwe.",
-      para3: "Ik kombinearje strategysk tinken mei praktyske levering. At jo in data-arsjitektuer-blueprint of in folsleine MDM-ymplementaasje nedich hawwe, bring ik sawol de fyzje as de technyske djipgong om it mooglik te meitsjen.",
+      label: 'Myn ferhaal', title: 'Data-oplossingen ûntwerpen', titleAccent: 'dy\'t skalearje',
+      para1: "As Solution Arsjitekt mei ûnderfining by Deloitte en yn 'e techsektor spesjalissearje ik my yn it ûntwerpen fan Master Data Management (MDM)-, Datakwaliteits- (DQ) en PIM-oplossingen dy't meiskalearje mei bedriuwskompleksiteit.",
+      para2: "Ik wurkje oer de folsleine delivery lifecycle — fan arsjitektuer en platfoarmseleksje (Informatica, Reltio, Stibo, SAP MDG) oant yntegraasjûntwerp (Informatica IDMC, MuleSoft, Kafka, REST API's, Amazon SQS) en tredde-partij-ekosystemen. Altyd yn nau gearwurking mei saaklike en technyske stakeholders om oplossingen fêst te meitsjen.",
+      para3: "Funderre yn DAMA DMBOK en Agile-prinsipes bring ik struktuer yn komplekse dataprogramma's sûnder it minsklike aspekt út it each te ferlieze. Ik ferkennez ek aktyf hoe't AI datakwaliteit en ferriking nei in heger nivo bringe kin — en diel dy ideeën graach mei de data-mienskip.",
     },
     expertise: {
       label: 'Kernkompetensy', title: 'Gebieten fan', titleAccent: 'Djippe Ekspertize',
       items: [
-        { title: 'Databehearsking', level: 95 },
         { title: 'Master Data Management (MDM)', level: 95 },
+        { title: 'Datakwaliteitsbehearsking', level: 95 },
         { title: 'Product Information Management (PIM)', level: 90 },
-        { title: 'Oplossingsarsjitektuer', level: 88 },
-        { title: 'Datagovernance', level: 85 },
-        { title: 'Datakwaliteitsbehearsking', level: 90 },
+        { title: 'Oplossingsarsjitektuer', level: 90 },
+        { title: 'Yntegraasjearsjitektuer', level: 85 },
+        { title: 'Datagovernance & DAMA DMBOK', level: 88 },
       ],
     },
     values: {
@@ -99,9 +99,9 @@ export default {
     },
     discuss: 'Beprate dizze tsjinst',
     items: [
-      { id: 'data-management', tagline: 'Fan kaos nei dúdlikheid', title: 'Databehearsking Konsultaasje',
-        desc: "Ik help organisaasjes de grûnslach fan in sûn data-ekosysteem te bouwen — governance-ramt, kwaliteitsstanderts en lifecycle-behearskingsproses dy't derfoar soargje dat data in betrouber, fertroud asset is yn it hiele bedriuw.",
-        deliverables: ["Ûntwerp en ymplementaasje fan datagovernance-ramt","Datakwaliteitsbeoardieling en ferbetterroadmap","Strategy foar data lifecycle management","Metadata-behearsking en data-katalogisearring","Modellen foar data-eigendom en data stewardship","Belied, standerts en dokumintaasje"] },
+      { id: 'data-management', tagline: 'Fan kaos nei dúdlikheid', title: 'Databehearsking & Kwaliteit',
+        desc: "Ik help organisaasjes robúste datakwaliteitsgovernance-ramt te bouwen — standerts, ark en proses definiearjen dy't skalearje oer merken en bedriuwsienheid. Fan globale DQ-blueprints en kwaliteitsbeoardielingen oant lifecycle management en metadatastrategyen.",
+        deliverables: ["Ûntwerp en ymplementaasje fan datakwaliteitsgovernance-ramt","Datakwaliteitsbeoardieling en ferbetterroadmap","DQ-ark seleksje & ymplementaasje","Strategy foar data lifecycle management","Metadata-behearsking en data-katalogisearring","Modellen foar data-eigendom en data stewardship"] },
       { id: 'mdm', tagline: 'Ien boarne fan wierheid', title: 'Master Data Management',
         desc: "Fragmentearre masterdata — duplikearre klanten, ynkonsistinte produkten, tsjinstriidiche leveransiergegevens — kostet bedriuwen tige folle. Ik ûntwerp en ymplementearje MDM-oplossingen dy't ien betrouber ferzje meitsje fan jo meast krityske data-entiteiten.",
         deliverables: ['MDM-strategy en platfoarmseleksje','Datamodel-ûntwerp foar masterdata-domeinen','Duplikaatdeteksje en data-deduplicatie','Golden record-ûntwerp en survivorship-regels','Yntegreaasje mei boarne- en ôfnemende systemen','Feroaringsbehear en adopsy-stipe'] },
@@ -110,7 +110,7 @@ export default {
         deliverables: ['PIM-platfoarmseleksje en -ymplementaasje','Produktdatamodel en taxonomy-ûntwerp','Kanaalspesifike data-ferrikingsworkflows','Yntegreaasje mei Digital Asset Management (DAM)','E-commerce en ERP-yntegreaasje','Optimalisaasje fan produktonboarding-proses'] },
       { id: 'architecture', tagline: 'Boud om te skalearjen', title: 'Oplossingsarsjitektuer',
         desc: "In geweldige oplossing begjint mei in geweldig ûntwerp. Ik leverje oplossingsarsjitektuer foar dataplatfoarms, yntegreaasje-lânskappe en bedriuwssystemen — sadat jo ynvestearringen skalbear, ûnderhâldber en ôfstimd binne op jo strategyske rjochting.",
-        deliverables: ['Dataplatfoarm-arsjitektuer en -ûntwerp','Enterprise data-yntegreaasje-arsjitektuer','Technology-lânskipbeoardieling','Cloud-dataplatfoarm-ûntwerp (Azure, AWS, GCP)','Arsjitektuer-roadmaps en migraasjeplanning','Arsjitektuer-governance en -review'] },
+        deliverables: ['Dataplatfoarm-arsjitektuer en -ûntwerp','Event-driven yntegraasjûntwerp (Kafka, Amazon SQS, REST APIs)','Technology-lânskipbeoardieling','Cloud-dataplatfoarm-ûntwerp (Azure, AWS, GCP)','Arsjitektuer-roadmaps en migraasjeplanning','Arsjitektuer-governance en -review'] },
     ],
     process: {
       label: 'Myn wurkwize', title: 'Myn', titleAccent: 'Gearwurkingsproses',

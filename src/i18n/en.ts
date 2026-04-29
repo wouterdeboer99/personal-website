@@ -4,7 +4,7 @@ export default {
     portfolio: 'Portfolio', contact: 'Contact', cta: 'Get in Touch',
   },
   footer: {
-    tagline: 'Transforming data into business value through expert consultancy in MDM, PIM, and Solution Architecture.',
+    tagline: 'Transforming data into business value through expert consultancy in MDM, Data Quality, PIM, and Solution Architecture.',
     navigation: 'Navigation', getInTouch: 'Get in Touch',
     location: 'Netherlands · Available Worldwide',
     startProject: 'Start a Project', rights: 'All rights reserved.',
@@ -15,12 +15,12 @@ export default {
       badge: 'Available for Projects',
       title: 'Transforming Data', titleAccent: 'Into Business Value',
       intro: "Hi, I'm", name: 'Wouter de Boer',
-      sub: '— data consultancy expert specialising in Data Management, MDM, PIM, and Solution Architecture. I help organisations unlock the true potential of their data assets.',
+      sub: '— Solution Architect specialising in Master Data Management, Data Quality and PIM. With experience at Deloitte and in the tech industry, I design data solutions that scale with business complexity.',
       cta1: 'Explore Services', cta2: 'View Portfolio',
     },
     stats: [
-      { value: '10+', label: 'Years Experience' },
-      { value: '30+', label: 'Projects Delivered' },
+      { value: '8+',  label: 'Years Experience' },
+      { value: '15+', label: 'Projects Delivered' },
       { value: '5+',  label: 'Industries Served' },
       { value: '100%', label: 'Client Satisfaction' },
     ],
@@ -30,7 +30,7 @@ export default {
       sub: 'From strategy to implementation — I cover the full spectrum of data management consultancy tailored to your business needs.',
       learnMore: 'Learn more →',
       items: [
-        { title: 'Data Management',               desc: 'Building robust data governance frameworks, quality standards, and lifecycle strategies that turn raw data into a reliable business asset.' },
+        { title: 'Data Management & Quality',      desc: 'Building robust data quality governance frameworks, defining standards and tooling designed to scale across markets and business units.' },
         { title: 'Master Data Management',         desc: 'Designing and implementing MDM solutions that ensure consistent, accurate, and unified master data across your entire organisation.' },
         { title: 'Product Information Management', desc: 'Optimizing PIM systems to streamline product data distribution, reduce time-to-market, and improve customer experience across all channels.' },
         { title: 'Solution Architecture',          desc: 'Designing scalable, future-proof data architectures aligned with your business goals, technology landscape, and long-term growth strategy.' },
@@ -39,8 +39,8 @@ export default {
     about: {
       label: 'About Wouter',
       title: 'A Consultant Who', titleAccent: 'Gets Things Done',
-      para1: "With over a decade of hands-on experience in data consultancy, I've helped organisations across multiple industries design, implement, and optimise their data strategies.",
-      para2: 'My approach combines technical depth with business acumen — delivering solutions that are not only architecturally sound, but also practical and scalable.',
+      para1: "With experience at Deloitte and across the tech industry, I design MDM, Data Quality and PIM solutions that scale with business complexity — working across the full delivery lifecycle, from architecture and platform selection to integration design.",
+      para2: "Grounded in DAMA DMBOK and Agile principles, I collaborate closely with business and technical stakeholders to make sure solutions stick. I'm also actively exploring how AI can elevate data quality and enrichment.",
       cta: 'Learn More About Me',
       highlights: [
         { icon: '🏗️', title: 'Architecture First',      desc: 'Every solution starts with a solid, scalable architecture designed for your future.' },
@@ -57,25 +57,25 @@ export default {
   about: {
     hero: {
       label: 'About Me', title: 'Meet', titleAccent: 'Wouter de Boer',
-      sub: 'Data consultant, architect, and problem solver — helping organisations make sense of their most valuable asset: their data.',
+      sub: 'Solution Architect with experience at Deloitte — designing MDM, Data Quality and PIM solutions that scale with business complexity.',
     },
-    card: { name: 'Wouter de Boer', role: 'Founder, WDB Data Consultancy', available: 'Available for Projects' },
-    tags: ['MDM', 'PIM', 'Data Governance', 'Solution Architecture', 'Data Quality', 'Data Strategy'],
+    card: { name: 'Wouter de Boer', role: 'Solution Architect & Founder, WDB Data Consultancy', available: 'Available for Projects' },
+    tags: ['Informatica', 'Reltio', 'Stibo', 'SAP MDG', 'Kafka', 'MuleSoft', 'AWS', 'Azure'],
     story: {
-      label: 'My Story', title: 'A Passion for', titleAccent: 'Turning Data Chaos Into Clarity',
-      para1: "I founded WDB Data Consultancy after years of working inside organisations struggling with fragmented, inconsistent, and unreliable data. I saw first-hand how poor data foundations could cripple decision-making, slow down operations, and cost businesses millions.",
-      para2: "My expertise spans the full data management spectrum — from defining Master Data Management strategies for global enterprises to implementing Product Information Management systems that power omni-channel commerce.",
-      para3: "I combine strategic thinking with hands-on delivery. Whether you need a data architecture blueprint or a full MDM implementation, I bring both the vision and the technical depth to make it happen.",
+      label: 'My Story', title: 'Designing Data Solutions', titleAccent: 'That Scale',
+      para1: "As a Solution Architect with experience at Deloitte and in the tech industry, I specialise in designing Master Data Management (MDM), Data Quality (DQ) and Product Information Management (PIM) solutions that scale with business complexity.",
+      para2: "I work across the full delivery lifecycle — from architecture and platform selection (Informatica, Reltio, Stibo, SAP MDG) to integration design (Informatica IDMC, MuleSoft, Kafka, REST APIs, Amazon SQS) and third-party ecosystems. Always collaborating closely with business and technical stakeholders to make sure solutions stick.",
+      para3: "Grounded in DAMA DMBOK and Agile principles, I bring structure to complex data programmes without losing sight of the human side. I'm also actively exploring how AI can take data quality and enrichment to the next level — and enjoy sharing those ideas with the data community.",
     },
     expertise: {
       label: 'Core Competencies', title: 'Areas of', titleAccent: 'Deep Expertise',
       items: [
-        { title: 'Data Management', level: 95 },
         { title: 'Master Data Management (MDM)', level: 95 },
+        { title: 'Data Quality Management', level: 95 },
         { title: 'Product Information Management (PIM)', level: 90 },
-        { title: 'Solution Architecture', level: 88 },
-        { title: 'Data Governance', level: 85 },
-        { title: 'Data Quality Management', level: 90 },
+        { title: 'Solution Architecture', level: 90 },
+        { title: 'Integration Architecture', level: 85 },
+        { title: 'Data Governance & DAMA DMBOK', level: 88 },
       ],
     },
     values: {
@@ -99,9 +99,9 @@ export default {
     },
     discuss: 'Discuss This Service',
     items: [
-      { id: 'data-management', tagline: 'From chaos to clarity', title: 'Data Management Consultancy',
-        desc: "I help organisations build the foundations of a healthy data ecosystem — governance frameworks, quality standards, and lifecycle management processes that ensure data is a reliable, trusted asset across the business.",
-        deliverables: ['Data governance framework design & implementation','Data quality assessment and improvement roadmap','Data lifecycle management strategy','Metadata management and data cataloguing','Data ownership and stewardship models','Policies, standards, and documentation'] },
+      { id: 'data-management', tagline: 'From chaos to clarity', title: 'Data Management & Quality',
+        desc: "I help organisations build robust data quality governance frameworks — defining standards, tooling, and processes designed to scale across markets and business units. From global DQ blueprints and quality assessments to lifecycle management and metadata strategies, I ensure data becomes a trusted, governed business asset.",
+        deliverables: ['Data quality governance framework design & implementation','Data quality assessment and improvement roadmap','DQ tooling selection & implementation','Data lifecycle management strategy','Metadata management and data cataloguing','Data ownership and stewardship models'] },
       { id: 'mdm', tagline: 'One source of truth', title: 'Master Data Management',
         desc: 'Fragmented master data — duplicated customers, inconsistent products, conflicting supplier records — costs businesses enormously. I design and implement MDM solutions that create a single, trusted version of your most critical data entities.',
         deliverables: ['MDM strategy and platform selection','Data model design for master data domains','Duplicate detection and data deduplication','Golden record design and survivorship rules','Integration with source and consuming systems','Change management and adoption support'] },
@@ -110,7 +110,7 @@ export default {
         deliverables: ['PIM platform selection and implementation','Product data model and taxonomy design','Channel-specific data enrichment workflows','Digital Asset Management (DAM) integration','E-commerce and ERP integration','Product onboarding process optimisation'] },
       { id: 'architecture', tagline: 'Built to scale', title: 'Solution Architecture',
         desc: "A great solution starts with a great design. I deliver solution architecture for data platforms, integration landscapes, and enterprise systems — ensuring your investments are scalable, maintainable, and aligned with your strategic direction.",
-        deliverables: ['Data platform architecture and design','Enterprise data integration architecture','Technology landscape assessment','Cloud data platform design (Azure, AWS, GCP)','Architecture roadmaps and migration planning','Architecture governance and review'] },
+        deliverables: ['Data platform architecture and design','Event-driven integration design (Kafka, Amazon SQS, REST APIs)','Technology landscape assessment','Cloud data platform design (Azure, AWS, GCP)','Architecture roadmaps and migration planning','Architecture governance and review'] },
     ],
     process: {
       label: 'How I Work', title: 'My', titleAccent: 'Engagement Process',

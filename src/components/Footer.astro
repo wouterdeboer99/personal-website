@@ -52,13 +52,9 @@ const links = ['home', 'about', 'services', 'portfolio', 'contact'] as const;
 </footer>
 
 <style>
-  .footer { position: relative; border-top: 1px solid var(--border); overflow: hidden; margin-top: 4rem; }
+  .footer { position: relative; border-top: 1px solid var(--border); overflow: hidden; margin-top: 4rem; background: var(--bg-surface); }
 
-  .footer-glow {
-    position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-    width: 500px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-  }
+  .footer-glow { display: none; }
 
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.25fr; gap: 3rem; padding: 3.5rem 0; }
 
