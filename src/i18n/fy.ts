@@ -111,6 +111,12 @@ export default {
       { id: 'architecture', tagline: 'Boud om te skalearjen', title: 'Oplossingsarsjitektuer',
         desc: "In geweldige oplossing begjint mei in geweldig ûntwerp. Ik leverje oplossingsarsjitektuer foar dataplatfoarms, yntegreaasje-lânskappe en bedriuwssystemen — sadat jo ynvestearringen skalbear, ûnderhâldber en ôfstimd binne op jo strategyske rjochting.",
         deliverables: ['Dataplatfoarm-arsjitektuer en -ûntwerp','Event-driven yntegraasjûntwerp (Kafka, Amazon SQS, REST APIs)','Technology-lânskipbeoardieling','Cloud-dataplatfoarm-ûntwerp (Azure, AWS, GCP)','Arsjitektuer-roadmaps en migraasjeplanning','Arsjitektuer-governance en -review'] },
+      { id: 'data-ai', tagline: 'Data klear foar it AI-tiidrek', title: 'Data & AI',
+        desc: "Ik help organisaasjes har data-fundamenten klear te meitsjen foar AI-oanneming — fan data readiness-beoardielingen en AI-governance-ramt oant praktyske begelieding by trending AI-mooglikheden lykas LLMs, Copilot-yntegraasjes en datapipelines foar ML.",
+        deliverables: ['AI data readiness-beoardieling en gap-analyse','Data-preparaasjepipelines foar AI/ML-wurklasten','Ûntwerp en ymplementaasje fan AI-governance-ramt','LLM-yntegreaasje-advys (OpenAI, Azure Copilot)','Datakwaliteitsferbetering foar AI-trainingsdata','AI use case-prioritearring en roadmap'] },
+      { id: 'informatica-idmc', tagline: 'MDM & Datakwaliteit, end-to-end', title: 'Informatica IDMC',
+        desc: "Spesjalist Informatica IDMC-ymplementaasjes foar MDM 360 en Cloud Data Quality (CDQ). Ynsetten as sawol Projektmanager as Solution Arsjitekt — fan earste scoping en stakeholder-ôfstemming oant technysk ûntwerp, konfiguraasje en go-live.",
+        deliverables: ['Informatica IDMC MDM 360 ymplementaasje (PM & SA)','Cloud Data Quality (CDQ) konfiguraasje en útrol','Datamodel en hiërargy-ûntwerp yn IDMC','Yntegraasjûntwerp mei boarne- en doelsystemen','Projektbehear: planning, governance, stakeholderrapportearring','Oplossingsarsjitektuer: technysk ûntwerp, platfoarmkonfiguraasje, prestaasje-optimalisaasje'] },
     ],
     process: {
       label: 'Myn wurkwize', title: 'Myn', titleAccent: 'Gearwurkingsproses',
