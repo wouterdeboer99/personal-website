@@ -111,6 +111,12 @@ export default {
       { id: 'architecture', tagline: 'Gebouwd om te schalen', title: 'Oplossingsarchitectuur',
         desc: 'Een geweldige oplossing begint met een geweldig ontwerp. Ik lever oplossingsarchitectuur voor dataplatformen, integratielandschappen en bedrijfssystemen — zodat uw investeringen schaalbaar, onderhoudbaar en afgestemd zijn op uw strategische richting.',
         deliverables: ['Dataplatformarchitectuur en -ontwerp','Event-driven integratieontwerp (Kafka, Amazon SQS, REST APIs)','Technologielandschapbeoordeling','Cloud-dataplatformontwerp (Azure, AWS, GCP)','Architectuurroadmaps en migratieplannen','Architectuurgovernance en -review'] },
+      { id: 'data-ai', tagline: 'Data klaar voor het AI-tijdperk', title: 'Data & AI',
+        desc: 'Ik help organisaties hun data-fundamenten voor te bereiden op AI-adoptie — van data readiness-assessments en AI-governance-frameworks tot praktische begeleiding bij trending AI-mogelijkheden zoals LLMs, Copilot-integraties en datapipelines voor ML.',
+        deliverables: ['AI data readiness-assessment en gap-analyse','Data-preparatiepipelines voor AI/ML-workloads','Ontwerp en implementatie van AI-governance-framework','LLM-integratie-advies (OpenAI, Azure Copilot)','Datakwaliteitsverbetering voor AI-trainingsdata','AI use case-prioritering en roadmap'] },
+      { id: 'informatica-idmc', tagline: 'MDM & Datakwaliteit, end-to-end', title: 'Informatica IDMC',
+        desc: 'Specialist Informatica IDMC-implementaties voor MDM 360 en Cloud Data Quality (CDQ). Ingezet als zowel Project Manager als Solution Architect — van initiële scoping en stakeholderafstemming tot technisch ontwerp, configuratie en go-live.',
+        deliverables: ['Informatica IDMC MDM 360 implementatie (PM & SA)','Cloud Data Quality (CDQ) configuratie en uitrol','Datamodel en hiërarchie-ontwerp in IDMC','Integratieontwerp met bron- en doelsystemen','Projectmanagement: planning, governance, stakeholderrapportage','Oplossingsarchitectuur: technisch ontwerp, platformconfiguratie, prestatieoptimalisatie'] },
     ],
     process: {
       label: 'Mijn werkwijze', title: 'Mijn', titleAccent: 'Engagementproces',
