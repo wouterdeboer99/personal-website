@@ -111,6 +111,12 @@ export default {
       { id: 'architecture', tagline: 'Built to scale', title: 'Solution Architecture',
         desc: "A great solution starts with a great design. I deliver solution architecture for data platforms, integration landscapes, and enterprise systems — ensuring your investments are scalable, maintainable, and aligned with your strategic direction.",
         deliverables: ['Data platform architecture and design','Event-driven integration design (Kafka, Amazon SQS, REST APIs)','Technology landscape assessment','Cloud data platform design (Azure, AWS, GCP)','Architecture roadmaps and migration planning','Architecture governance and review'] },
+      { id: 'data-ai', tagline: 'Data-ready for the AI era', title: 'Data & AI',
+        desc: "Helping organisations prepare their data foundations for AI adoption — covering data readiness assessments, AI governance frameworks, and hands-on guidance on trending AI capabilities including LLMs, Copilot integrations, and data pipelines for ML.",
+        deliverables: ['AI data readiness assessment and gap analysis','Data preparation pipelines for AI/ML workloads','AI governance framework design and implementation','LLM integration advisory (OpenAI, Azure Copilot)','Data quality improvement for AI training data','AI use case prioritisation and roadmap'] },
+      { id: 'informatica-idmc', tagline: 'MDM & Data Quality, end-to-end', title: 'Informatica IDMC',
+        desc: 'Specialist Informatica IDMC implementations covering MDM 360 and Cloud Data Quality (CDQ). Engaged as both Project Manager and Solution Architect — from initial scoping and stakeholder alignment through to technical design, configuration, and go-live.',
+        deliverables: ['Informatica IDMC MDM 360 implementation (PM & SA)','Cloud Data Quality (CDQ) configuration and rollout','Data model and hierarchy design in IDMC','Integration design with source and target systems','Project management: planning, governance, stakeholder reporting','Solution architecture: technical design, platform configuration, performance tuning'] },
     ],
     process: {
       label: 'How I Work', title: 'My', titleAccent: 'Engagement Process',
