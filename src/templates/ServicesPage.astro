@@ -7,12 +7,97 @@ const { lang } = Astro.props;
 const i = t(lang);
 const s = i.services;
 
-const serviceIcons = [
-  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M6 6h4M14 6h4M6 18h4M14 18h4M10 12H6M18 12h-4"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
-  `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M17.5 17.5L21 21M14 17.5h3.5v3.5"/></svg>`,
+const serviceCards: Array<{
+  logos: Array<{ src?: string; text?: string; color?: string; name: string }>;
+  metrics: Array<{ val: string; label: string }>;
+}> = [
+  {
+    logos: [
+      { src: 'https://cdn.simpleicons.org/informatica/1B3A5C', name: 'Informatica' },
+      { src: 'https://cdn.simpleicons.org/microsoftazure/0078d4', name: 'Azure' },
+      { src: 'https://cdn.simpleicons.org/amazonaws/FF9900', name: 'AWS' },
+    ],
+    metrics: [
+      { val: '8+',   label: 'Years delivering DQ programmes' },
+      { val: '100%', label: 'Client satisfaction rate' },
+      { val: '15+',  label: 'Governance frameworks built' },
+      { val: '5+',   label: 'Industries served' },
+    ],
+  },
+  {
+    logos: [
+      { src: 'https://cdn.simpleicons.org/informatica/1B3A5C', name: 'Informatica' },
+      { src: 'https://cdn.simpleicons.org/sap/009FDA', name: 'SAP MDG' },
+      { text: 'R', color: '#7c3aed', name: 'Reltio' },
+    ],
+    metrics: [
+      { val: '80%', label: 'Avg. reduction in data inconsistencies' },
+      { val: '12',  label: 'Business units unified in one engagement' },
+      { val: '6',   label: 'Countries covered in largest MDM rollout' },
+      { val: '3',   label: 'MDM platforms hands-on certified' },
+    ],
+  },
+  {
+    logos: [
+      { text: 'S', color: '#e85d1e', name: 'Stibo' },
+      { src: 'https://cdn.simpleicons.org/akeneo/FF5621', name: 'Akeneo' },
+      { src: 'https://cdn.simpleicons.org/shopify/96bf48', name: 'Shopify' },
+    ],
+    metrics: [
+      { val: '3 days', label: 'Time-to-market (down from 3 weeks)' },
+      { val: '40K+',   label: 'Products migrated in one project' },
+      { val: '8',      label: 'Sales channels connected' },
+      { val: '100%',   label: 'Client satisfaction rate' },
+    ],
+  },
+  {
+    logos: [
+      { src: 'https://cdn.simpleicons.org/amazonaws/FF9900', name: 'AWS' },
+      { src: 'https://cdn.simpleicons.org/microsoftazure/0078d4', name: 'Azure' },
+      { src: 'https://cdn.simpleicons.org/apachekafka/231F20', name: 'Kafka' },
+      { src: 'https://cdn.simpleicons.org/mulesoft/00A1DF', name: 'MuleSoft' },
+    ],
+    metrics: [
+      { val: '15+', label: 'Architecture blueprints delivered' },
+      { val: '3',   label: 'Cloud platforms (AWS, Azure, GCP)' },
+      { val: '8+',  label: 'Years of architecture experience' },
+      { val: '5+',  label: 'Industries covered' },
+    ],
+  },
+  {
+    logos: [
+      { src: 'https://cdn.simpleicons.org/openai/000000', name: 'OpenAI' },
+      { src: 'https://cdn.simpleicons.org/databricks/FF3621', name: 'Databricks' },
+      { src: 'https://cdn.simpleicons.org/python/3776AB', name: 'Python' },
+      { src: 'https://cdn.simpleicons.org/microsoftazure/0078d4', name: 'Copilot' },
+    ],
+    metrics: [
+      { val: '8+',         label: 'Years of data foundation experience' },
+      { val: 'AI-first',   label: 'Governance frameworks designed' },
+      { val: '100%',       label: 'Data readiness focus before AI adoption' },
+      { val: 'End-to-end', label: 'From data prep to AI deployment' },
+    ],
+  },
+  {
+    logos: [
+      { src: 'https://cdn.simpleicons.org/informatica/FF4D00', name: 'IDMC' },
+      { src: 'https://cdn.simpleicons.org/informatica/1B3A5C', name: 'MDM 360' },
+      { src: 'https://cdn.simpleicons.org/informatica/2563eb', name: 'CDQ' },
+    ],
+    metrics: [
+      { val: '8+',  label: 'Years hands-on with Informatica' },
+      { val: '2',   label: 'Roles: Project Manager & Solution Architect' },
+      { val: 'MDM', label: '& Data Quality specialist modules' },
+      { val: '5+',  label: 'IDMC implementations delivered' },
+    ],
+  },
 ];
+
+if (serviceCards.length !== s.items.length) {
+  throw new Error(
+    `serviceCards has ${serviceCards.length} entries but s.items has ${s.items.length}. They must match.`
+  );
+}
 ---
 
 <Layout title={i.nav.services} lang={lang}>
@@ -52,7 +137,27 @@ const serviceIcons = [
               {s.discuss}
             </a>
           </div>
-          <div class="service-icon-large glass-card" aria-hidden="true" set:html={serviceIcons[idx]} />
+          <div class="service-stats-card glass-card" aria-hidden="true">
+            <div class="logo-chips">
+              {serviceCards[idx].logos.map(logo => (
+                <div class="logo-chip">
+                  {logo.src
+                    ? <img src={logo.src} alt={logo.name} width="14" height="14" loading="lazy" />
+                    : <span class="logo-text" aria-hidden="true" style={`color:${logo.color}`}>{logo.text}</span>
+                  }
+                  <span>{logo.name}</span>
+                </div>
+              ))}
+            </div>
+            <div class="metrics-grid">
+              {serviceCards[idx].metrics.map(m => (
+                <div class="metric-tile">
+                  <div class="metric-val">{m.val}</div>
+                  <div class="metric-label">{m.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </article>
       ))}
     </div>
@@ -97,8 +202,16 @@ const serviceIcons = [
   .service-row { display:grid; grid-template-columns:1.4fr 1fr; gap:5rem; align-items:center; }
   .service-row.reverse { direction:rtl; }
   .service-row.reverse > * { direction:ltr; }
-  .service-icon-large { display:flex; align-items:center; justify-content:center; aspect-ratio:1; max-width:280px; margin:0 auto; color:var(--accent-primary); background:var(--bg-surface); }
-  .service-icon-large :global(svg) { width:80px; height:80px; opacity:0.75; }
+  .service-stats-card { background:var(--bg-surface); border-radius:16px; padding:1.5rem; display:flex; flex-direction:column; gap:1rem; max-width:280px; margin:0 auto; }
+  .logo-chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .logo-chip { display:flex; align-items:center; gap:5px; background:white; border:1px solid var(--border); border-radius:6px; padding:4px 10px; }
+  .logo-chip img { width:14px; height:14px; object-fit:contain; }
+  .logo-chip span { font-size:9px; color:var(--text-secondary); font-weight:500; }
+  .logo-chip .logo-text { font-weight:700; }
+  .metrics-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .metric-tile { background:white; border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+  .metric-val { font-size:1.1rem; font-weight:800; color:var(--accent-primary); line-height:1; }
+  .metric-label { font-size:0.65rem; color:var(--text-muted); margin-top:3px; line-height:1.3; }
   .deliverables { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
   .deliverables li { display:flex; align-items:center; gap:0.75rem; font-size:0.9rem; color:var(--text-secondary); }
   .deliverables svg { flex-shrink:0; }
@@ -110,7 +223,7 @@ const serviceIcons = [
   @media (max-width:900px) {
     .service-row { grid-template-columns:1fr; gap:2.5rem; }
     .service-row.reverse { direction:ltr; }
-    .service-icon-large { display:none; }
+    .service-stats-card { display:none; }
     .process-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width:480px) { .process-grid { grid-template-columns:1fr; } }
