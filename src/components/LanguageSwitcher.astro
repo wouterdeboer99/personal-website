@@ -1,5 +1,5 @@
 ---
-import { languages, localizedPath, type Lang } from '../i18n/index';
+import { languages, visibleLanguages, localizedPath, type Lang } from '../i18n/index';
 
 interface Props {
   currentLang: Lang;
@@ -10,15 +10,15 @@ const { currentLang, pathname } = Astro.props;
 ---
 
 <div class="lang-switcher" role="navigation" aria-label="Language switcher">
-  {Object.entries(languages).map(([lang, { label, name }]) => (
+  {visibleLanguages.map(lang => (
     <a
-      href={localizedPath(pathname, lang as Lang)}
+      href={localizedPath(pathname, lang)}
       class:list={['lang-btn', { active: lang === currentLang }]}
-      aria-label={`Switch to ${name}`}
+      aria-label={`Switch to ${languages[lang].name}`}
       aria-current={lang === currentLang ? 'true' : undefined}
       hreflang={lang}
     >
-      {label}
+      {languages[lang].label}
     </a>
   ))}
 </div>

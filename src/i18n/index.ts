@@ -10,6 +10,10 @@ export const languages: Record<Lang, { label: string; name: string; htmlLang: st
   fy: { label: 'FY', name: 'Frysk',      htmlLang: 'fy' },
 };
 
+// Only these languages appear in the UI switcher. Frisian is kept available
+// at /fy/* but hidden from the switcher by default.
+export const visibleLanguages: Lang[] = ['en', 'nl'];
+
 export const defaultLang: Lang = 'en';
 
 const translations = { en, nl, fy } as const;
